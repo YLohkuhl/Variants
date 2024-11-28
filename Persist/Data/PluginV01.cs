@@ -24,8 +24,10 @@ namespace Variants.Persist
 
             ///
 
-            VariantLogger.Msg("Requested data load; loaded.");
+            VariantLogger.Msg("Requested data load...");
         }
+
+        public override void Cleanup() { }
         
         ///
 

@@ -24,7 +24,7 @@ namespace Variants.Persist
 
         public override void Load() { }
 
-        public void Cleanup()
+        public override void Cleanup()
         {
             AutoSaveDirector autoSaveDirector = GameContext.Instance.AutoSaveDirector;
 
@@ -76,7 +76,7 @@ namespace Variants.Persist
 
             ///
 
-            VariantLogger.Msg("Requested data cleanup; cleaned up.");
+            VariantLogger.Msg("Requested data cleanup...");
         }
     }
 }

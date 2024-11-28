@@ -33,8 +33,10 @@ namespace Variants
                 }
                 else
                     VariantLogger.Error($"[{PersistentId}] Variant Appearances cannot have duplicate Persistent IDs. Rename the appearance to avoid any future conflicts.");
+                
                 return;
             }
+
             VariantLogger.Error($"[{PersistentId}] Variant Appearances require a unique name to be set for persistent identification.");
         }
 
@@ -58,6 +60,8 @@ namespace Variants
 
         public SlimeAppearance.Palette Palette { get; set; }
 
+        public bool UnlockPediaOnVac { get; set; }
+
         ///
 
         public VariantDesign Design { get; set; }
@@ -68,7 +72,7 @@ namespace Variants
         {
             internal Dictionary<string, Material> RuntimeMaterials = [];
 
-            internal Dictionary<SlimeFace.SlimeExpression, Material[]> RuntimeExpressions = [];
+            // internal Dictionary<SlimeFace.SlimeExpression, Material[]> RuntimeExpressions = [];
 
             ///
 
@@ -76,7 +80,7 @@ namespace Variants
 
             public VariantMaterial[] Materials { get; set; }
 
-            public VariantExpression[] Expressions { get; set; }
+            // public VariantExpression[] Expressions { get; set; }
         }
     }
 }

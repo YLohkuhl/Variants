@@ -1,11 +1,13 @@
 ﻿
-internal static class _
+public static class _
 {
     public static bool IsNull(this object obj) => obj == null;
 
     public static bool IsNotNull(this object obj) => !obj.IsNull();
 
     public static T Get<T>(string name) where T : UnityEngine.Object => Resources.FindObjectsOfTypeAll<T>().FirstOrDefault(found => found.name.Equals(name));
+
+    public static IdentifiableType GetReferencedType(string referenceId) => Resources.FindObjectsOfTypeAll<IdentifiableType>().FirstOrDefault(found => found.ReferenceId.Equals(referenceId));
 
     public static Sprite ToSprite(this Texture2D texture)
     {

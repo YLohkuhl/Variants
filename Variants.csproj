@@ -7,6 +7,9 @@
 	<DebugType>embedded</DebugType>
 	<LangVersion>latest</LangVersion>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	<SignAssembly>False</SignAssembly>
+	<Company>$(Authors)</Company>
+	<Authors>YLohkuhl</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -18,11 +21,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Classes\Struct\VariantExpression.cs" />
+    <Compile Remove="Harmony\SlimeAppearanceApplicatorSetExpressionPatch.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Assets\AB\variants" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\AB\variants" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Classes\Struct\VariantExpression.cs" />
+    <None Include="Harmony\SlimeAppearanceApplicatorSetExpressionPatch.cs" />
   </ItemGroup>
 
   <ItemGroup>

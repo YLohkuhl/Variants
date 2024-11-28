@@ -15,9 +15,11 @@ namespace Variants.Persist
 
         public abstract void Load();
 
+        public abstract void Cleanup();
+
         ///
 
-        public virtual void Write()
+        public void Write()
         {
             try
             {
@@ -44,7 +46,7 @@ namespace Variants.Persist
 
         ///
 
-        public virtual T Load<T>() where T : VariantPersistentData
+        public T Load<T>() where T : VariantPersistentData
         {
             T container = (T)this;
 

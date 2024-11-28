@@ -8,7 +8,7 @@ using MelonLoader;
 
 [assembly: HarmonyDontPatchAll]
 
-[assembly: MelonInfo(typeof(Variants.Variants), "Variants", "1.0.0", "YLohkuhl")]
+[assembly: MelonInfo(typeof(Variants.Variants), "Variants", "1.0.0", "YLohkuhl", "https://www.nexusmods.com/slimerancher2/mods/87")]
 [assembly: MelonGame("MonomiPark", "SlimeRancher2")]
 [assembly: MelonColor(0, 131, 105, 228)]
 
